@@ -1,3 +1,7 @@
+# Links
+- https://hink-cta-be.herokuapp.com/
+- https://zealous-ptolemy-2809b4.netlify.app/
+
 # PERN Final Project Template
 
 - select `use this template`
