@@ -14,23 +14,17 @@ app.get("/", (req, res) => {
   res.send("Hello, world!");
 });
 
-/////////////////////////////////////
-// REMOVE AFTER SUCCESSFUL DEPLOYMENT
-/////////////////////////////////////
 const db = require("./db/dbConfig.js");
 
-app.get("/test", async (req, res) => {
+app.get("/products", async (req, res) => {
   try {
-    const allDays = await db.any("SELECT * FROM test");
-    res.json(allDays);
+    const allProducts = await db.any("SELECT * FROM products");
+    res.json(allProducts);
   } catch (err) {
     res.json(err);
   }
 });
 
-/////////////////////////////////////
-// REMOVE AFTER SUCCESSFUL DEPLOYMENT
-/////////////////////////////////////
 
 // EXPORT
 module.exports = app;
