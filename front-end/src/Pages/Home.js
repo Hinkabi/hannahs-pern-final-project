@@ -1,8 +1,10 @@
+import welcome from "../assets/welcome.png"
+
 function Home(){
 
     return(
-        <div>
-            <h2>Welcome to my Makeup App</h2>
+        <div className="home">
+            <img src={welcome} />
 
         </div>
     )

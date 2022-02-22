@@ -4,12 +4,12 @@ export default function NavBar(){
 
     return(
         <nav>
-            <h2>
+            <div>
                 <Link to="/products">Products</Link>
-            </h2>
-            <button>
+            </div>
+            <div>
                 <Link to="/products/new">New Product</Link>
-            </button>
+            </div>
         </nav>
     )
 };

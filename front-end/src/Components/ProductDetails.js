@@ -32,26 +32,34 @@ function ProductDetails() {
   };
 
   return (
-    <div>
-      <img src={product.image} />
-      <p>{product.name}</p>
-
+    <div className="details-container">
+    <div className="product-details">
+      <div className="img-container">
+        <img src={product.image} />
+      </div>
+      <div className="info-container">
+        <h1>{product.name}</h1>
+        <p>{product.description}</p>
+        <span>${product.price}</span>
+    </div>
+    </div>
       <div className="showNavigation">
-        <div>
-          <Link to={`/products`}>
-            <button>Back</button>
-          </Link>
-        </div>
-        <div>
-          <Link to={`/products/${product.id}/edit`}>
-            <button>Edit</button>
-          </Link>
-        </div>
-        <div>
-          <button onClick={handleDelete}>Delete</button>
-        </div>
+      <div>
+        <Link to={`/products`}>
+          <button>Back</button>
+        </Link>
+      </div>
+      <div>
+        <Link to={`/products/${product.id}/edit`}>
+          <button>Edit</button>
+        </Link>
+      </div>
+      <div>
+        <button onClick={handleDelete}>Delete</button>
       </div>
     </div>
+    </div>
+
   );
 }
 

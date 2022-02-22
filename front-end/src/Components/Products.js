@@ -19,12 +19,12 @@ function Products() {
       )}, []);
       
   return (
-    <div>
-      <ul>
+    <div className="products-container">
+      <div className="products">
         {products.map((product)=>{
           return <Product key={product.id} product={product} />
         })}
-      </ul>
+      </div>
     </div>
   )
   

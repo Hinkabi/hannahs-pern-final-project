@@ -11,7 +11,6 @@ import NavBar from "./Components/Navbar";
 function App(){
 
 
-
   return(
     <div className="App">
       <Router>
