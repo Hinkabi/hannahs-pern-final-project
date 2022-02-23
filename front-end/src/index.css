@@ -45,11 +45,15 @@ body {
 }
 
 nav{
+  /* display: flex; */
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   background-color: white;
   padding: 10px;
   font-size: 45px;
+  /* justify-content: space-between; */
+  /* align-content: center; */
+  
 }
 
 nav img{
@@ -99,4 +103,18 @@ nav img{
   max-width: 350px;
   margin: 0 auto;
   padding: 20px;
+}
+
+.cart-items{
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 30px;
+}
+
+.cart-items img{
+  width: 350px;
+}
+
+.cart-items p{
+  padding: 0px;
 }

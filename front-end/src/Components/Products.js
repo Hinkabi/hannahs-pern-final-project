@@ -3,9 +3,7 @@ import { useState, useEffect } from "react";
 import Product from "../Components/Product.js";
 const API = process.env.REACT_APP_API_URL;
 
-
-console.log(API);
-function Products() {
+function Products({handleAddToCart}) {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     axios
@@ -22,7 +20,7 @@ function Products() {
     <div className="products-container">
       <div className="products">
         {products.map((product)=>{
-          return <Product key={product.id} product={product} />
+          return <Product key={product.id} product={product} handleAddToCart={handleAddToCart} />
         })}
       </div>
     </div>

@@ -5,7 +5,7 @@ import Button from "@mui/material/Button";
 
 const API = process.env.REACT_APP_API_URL;
 
-function ProductDetails() {
+function ProductDetails({handleAddToCart}) {
   const [product, setProduct] = useState([]);
   let { id } = useParams();
   let navigate = useNavigate();
@@ -32,6 +32,7 @@ function ProductDetails() {
       });
   };
 
+
   return (
     <div className="details-container">
       <div className="product-details">
@@ -42,6 +43,8 @@ function ProductDetails() {
           <h1>{product.name}</h1>
           <p>{product.description}</p>
           <span>${product.price}</span>
+          <br />
+          <button onClick={()=>handleAddToCart(product)} >Add to cart</button>
         </div>
       </div>
       <div className="showNavigation">

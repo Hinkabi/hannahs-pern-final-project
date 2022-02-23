@@ -16,6 +16,9 @@ export default function NavBar(){
             <div>
                 <Link to="/products/new">New Product</Link>
             </div>
+            <div>
+                <Link to="/cart">Cart</Link>
+            </div>
         </nav>
     )
 };

@@ -1,10 +1,10 @@
 import ProductDetails from "../Components/ProductDetails.js"
 
-function Show(){
+function Show({handleAddToCart}){
 
     return(
         <div>
-            <ProductDetails />
+            <ProductDetails handleAddToCart={handleAddToCart}/>
         </div>
     )
 }
