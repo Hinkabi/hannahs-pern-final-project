@@ -1,6 +1,9 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate , Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import {FormControl,InputLabel,OutlinedInput,Checkbox,FormControlLabel} from "@mui/material";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -36,69 +39,90 @@ function ProductNewForm(){
     }
 
     return(
-        <div>
-             <form onSubmit={handleSubmit}>
-            <label htmlFor="name">Name</label>
-            <input required
+        <div className="form-container">
+      <Box component="form" onSubmit={handleSubmit}>
+        <FormControl margin="dense">
+          <InputLabel htmlFor="name">Name</InputLabel>
+          <OutlinedInput
+            required
             id="name"
             value={product.name}
+            label="Name"
             type="text"
             onChange={handleTextChange}
             placeholder="Name of product"
-            />
-            <label htmlFor="image">Image:</label>
-            <input 
+          />
+        </FormControl>
+        <FormControl margin="dense">
+          <InputLabel htmlFor="image">Image</InputLabel>
+          <OutlinedInput
             id="image"
             type="text"
-            name="image"
+            label="Image"
             value={product.image}
-            placeholder="Image"
             onChange={handleTextChange}
-            />
-            <label htmlFor="description">Description:</label>
-            <input
+          />
+        </FormControl>
+        <FormControl margin="dense">
+          <InputLabel htmlFor="description">Description</InputLabel>
+          <OutlinedInput
             id="description"
             type="text"
+            label="Description"
             value={product.description}
-            placeholder="description"
             onChange={handleTextChange}
-            />
-            <label htmlFor="color">Color:</label>
-            <input
+          />
+        </FormControl>
+        <FormControl margin="dense">
+          <InputLabel htmlFor="color">Color</InputLabel>
+          <OutlinedInput
             id="color"
             type="text"
+            label="Color"
             onChange={handleTextChange}
             value={product.color}
             placeholder="color"
-            />
-            <label htmlFor="price">Price:</label>
-            <input
+          />
+        </FormControl>
+        <FormControl margin="dense">
+          <InputLabel htmlFor="price">Price</InputLabel>
+          <OutlinedInput
             id="price"
             value={product.price}
+            label="Price"
             type="number"
             onChange={handleTextChange}
             placeholder="Price"
-            />
-            <label htmlFor="rating">rating:</label>
-            <input
+          />
+        </FormControl>
+        <FormControl margin="dense">
+          <InputLabel htmlFor="rating">Rating</InputLabel>
+          <OutlinedInput
             id="rating"
             value={product.rating}
+            label="Rating"
             type="number"
             onChange={handleTextChange}
             placeholder="rating"
-            />
-             <label htmlFor="featured">Featured:</label>
-            <input
-            id="featured"
-            type="checkbox"
-            onChange={handleCheckboxChange}
-            checked={product.featured}
-            />
-            <br />
-           <input type="submit" /> 
-      </form>
-
-        </div>
+          />
+        </FormControl>
+        <br />
+        <FormControlLabel
+          control={<Checkbox />}
+          label="Featured"
+          onChange={handleCheckboxChange}
+        />
+        <br />
+        <Button variant="outlined" type="submit" sx={{ 
+        borderRadius: 35,
+        borderColor: "#ff6bb5",
+        backgroundColor: "#ff6bb5",
+        color: "white"
+        }}>
+          Submit
+        </Button>
+      </Box>
+    </div>
     )
 }
 

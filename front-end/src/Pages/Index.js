@@ -3,7 +3,7 @@ function Index(){
 
     return(
         <div>
-            <h2>Index Page</h2>
+            <h2>All Products</h2>
             <Products />
         </div>
     )
