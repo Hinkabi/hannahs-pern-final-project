@@ -61,7 +61,7 @@ nav img{
 }
 
 .home img{
-  width: 100vw;
+  width: 100%;
   height: auto;
 }
 
@@ -117,4 +117,22 @@ nav img{
 
 .cart-items p{
   padding: 0px;
+}
+
+.footer{
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  background-color: #ff6bb5;
+ 
+}
+
+@media only screen and (max-width: 600px) {
+  /* For mobile phones: */
+  nav{
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 25px;
+  }
+
 }

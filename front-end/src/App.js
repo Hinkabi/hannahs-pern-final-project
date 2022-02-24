@@ -9,6 +9,7 @@ import New from "./Pages/New";
 import Show from "./Pages/Show";
 import NavBar from "./Components/Navbar";
 import Cart from "./Components/Cart"
+import Footer from "./Pages/Footer";
 
 function App(){
   const [cartItems, setCartItems] = useState([]);
@@ -35,6 +36,7 @@ function App(){
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </main>
+        <Footer />
       </Router>
 
     </div>
