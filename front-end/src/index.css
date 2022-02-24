@@ -83,6 +83,10 @@ nav img{
   font-size: 25px;
 }
 
+.info-container button{
+  margin: 10px;
+}
+
 .showNavigation{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -133,6 +137,14 @@ nav img{
     display: grid;
     grid-template-columns: 1fr;
     font-size: 25px;
+  }
+
+  .products{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .product-details{
+    grid-template-columns: 1fr;
   }
 
 }
