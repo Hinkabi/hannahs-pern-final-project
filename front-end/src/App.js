@@ -13,7 +13,7 @@ import Footer from "./Pages/Footer";
 
 function App(){
   const [cartItems, setCartItems] = useState([]);
-  const [total, setTotal] = useState(0);
+  // const [total, setTotal] = useState(0);
 
   const handleAddToCart = (product) =>{
     setCartItems([...cartItems, product])
@@ -28,7 +28,7 @@ function App(){
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Index handleAddToCart={handleAddToCart}/>} />
+            <Route path="/products" element={<Index />} />
             <Route path="/products/new" element={<New />} />
             <Route exact path="/products/:id" element={<Show handleAddToCart={handleAddToCart}/>} />
             <Route path="/products/:id/edit" element={<Edit />} />
