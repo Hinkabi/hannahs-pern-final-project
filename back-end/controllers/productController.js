@@ -8,7 +8,7 @@ const {
   updateProduct,
 } = require("../queries/products.js");
 
-products.get("/", async (req, res) => {
+products.get("/", async (req, res) => { 
   try {
     const allProducts = await getAllProducts();
     if (allProducts[0]) {
@@ -62,7 +62,7 @@ products.post("/", async (req,res) =>{
         if(newProduct.id){
             res.status(200).json(newProduct);
         } else {
-            res.status(500).json({error: "Product creation error"})
+            res.status(500).json({error: "Product creation error"}) 
         }
     } catch (err){
         return err;
